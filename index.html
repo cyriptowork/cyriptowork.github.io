@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyriptowork | Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* MARKA İSMİ - %10 DAHA HIZLANDIRILDI (2.0s) */
+        .brand-name {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: softFade 2.0s ease-out forwards;
+        }
+
+        /* COMING SOON - KÜÇÜK HARF */
+        .coming-soon {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 14px;
+            color: #777;
+            text-transform: lowercase;
+            opacity: 0;
+            animation: softFade 2.0s ease-out 0.6s forwards;
+        }
+
+        /* SOL ALT KÖŞE YAZISI */
+        .footer-text {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            font-size: 0.75rem;
+            color: #333; /* Çok göze batmayan mat gri */
+            letter-spacing: 2px;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeInSimple 2s ease-in 2s forwards; /* En son süzülerek gelsin */
+        }
+
+        @keyframes softFade {
+            0% { 
+                opacity: 0; 
+                transform: translateY(20px); 
+                filter: blur(5px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0); 
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeInSimple {
+            from { opacity: 0; }
+            to { opacity: 0.6; }
+        }
+
+        @media (max-width: 768px) {
+            .brand-name { font-size: 2.2rem; }
+            .coming-soon { font-size: 0.8rem; letter-spacing: 5px; }
+            .footer-text { bottom: 20px; left: 20px; font-size: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="brand-name">CYRIPTOWORK</div>
+    <div class="coming-soon">coming soon</div>
+
+    <div class="footer-text">© 2026 Ayberk Corporation</div>
+
+</body>
+</html>
